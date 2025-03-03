@@ -1,0 +1,25 @@
+# Répertoires locaux de Terraform contenant les plugins et modules
+**/.terraform/*
+
+# Fichiers d'état de Terraform qui peuvent contenir des informations sensibles
+*.tfstate
+*.tfstate.*
+
+# Fichiers de variables qui peuvent contenir des données sensibles
+*.tfvars
+*.tfvars.json
+
+# Fichiers de log générés par Terraform en cas d'erreur
+crash.log
+crash.*.log
+
+# Fichiers de configuration spécifiques à l'environnement de développement
+.idea/
+.vscode/
+
+# Fichiers système spécifiques à certains OS
+.DS_Store
+Thumbs.db
+
+# Fichiers de lock de Terraform (à versionner si vous travaillez en équipe)
+.terraform.lock.hcl
