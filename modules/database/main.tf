@@ -24,3 +24,10 @@ resource "azurerm_mssql_firewall_rule" "allow_my_ip" {
   start_ip_address = var.my_ip_address
   end_ip_address   = var.my_ip_address
 }
+
+resource "azurerm_sql_virtual_network_rule" "sql_vnet_rule" {
+  name                = "${var.sql_server_name}-vnet-rule"
+  resource_group_name = var.resource_group_name
+  server_name         = azurerm_mssql_server.sqlserver.name
+  subnet_id           = var.db_subnet_id
+}

@@ -28,4 +28,5 @@ module "database" {
   admin_password      = "Medard44?"
   sql_database_name   = "sqldb-lucas"
   my_ip_address       = "88.140.191.20"
+  db_subnet_id        = module.network.db_subnet_id
 }

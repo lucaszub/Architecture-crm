@@ -40,3 +40,7 @@ variable "subnet_id" {
   type        = string
   default     = ""
 }
+variable "db_subnet_id" {
+  description = "ID du sous-réseau de la base de données"
+  type        = string
+}
