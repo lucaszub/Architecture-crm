@@ -30,3 +30,12 @@ module "database" {
   my_ip_address       = "88.140.191.20"
   db_subnet_id        = module.network.db_subnet_id
 }
+
+
+module "static_webapp" {
+  source                = "./modules/static_webapp"
+  resource_group_name   = "az-tf-front"
+  location              = "West Europe"
+}
+
+
