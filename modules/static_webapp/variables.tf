@@ -9,3 +9,7 @@ variable "location" {
     default = "West Europe"
 
 }
+variable "static_webapp_name" {
+  description = "Nom de l'application web"
+  type        = string
+}

@@ -36,6 +36,7 @@ module "static_webapp" {
   source                = "./modules/static_webapp"
   resource_group_name   = "az-tf-front"
   location              = "West Europe"
+  static_webapp_name    = "react-app"
 }
 
 
