@@ -17,6 +17,7 @@ module "webapp" {
   service_plan_name       = "sp-app-lucas"
   container_registry_name = "acrappcontainerlucas"
   webapp_name             = "webapp-container-lucas"
+  webapp_subnet_id        = module.network.webapp_subnet_id
 }
 
 module "database" {
@@ -38,5 +39,4 @@ module "static_webapp" {
   location              = "West Europe"
   static_webapp_name    = "react-app"
 }
-
 

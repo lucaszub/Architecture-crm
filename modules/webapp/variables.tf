@@ -23,3 +23,8 @@ variable "webapp_name" {
   description = "Nom de l'application web"
   type        = string
 }
+
+variable "webapp_subnet_id" {
+  description = "ID du subnet pour l'intégration VNet de la Web App"
+  type        = string
+}
