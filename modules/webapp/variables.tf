@@ -24,7 +24,7 @@ variable "webapp_name" {
   type        = string
 }
 
-variable "webapp_subnet_id" {
+variable "subnet_db_id" {
   description = "ID du subnet pour l'intégration VNet de la Web App"
   type        = string
 }

@@ -16,7 +16,16 @@ resource "azurerm_subnet" "subnet_db" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = [var.db_subnet_address]
   service_endpoints    = ["Microsoft.Sql"]
+
+  delegation {
+    name = "webapp-delegation"
+    service_delegation {
+      name    = "Microsoft.Web/serverFarms"
+      actions = ["Microsoft.Network/virtualNetworks/subnets/join/action"]
+    }
+  }
 }
+
 
 resource "azurerm_subnet" "subnet_webapp" {
   name                 = "subnet-webapp-lucas"

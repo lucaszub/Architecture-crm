@@ -17,7 +17,7 @@ module "webapp" {
   service_plan_name       = "sp-app-lucas"
   container_registry_name = "acrappcontainerlucas"
   webapp_name             = "webapp-container-lucas"
-  webapp_subnet_id        = module.network.webapp_subnet_id
+  subnet_db_id            = module.network.subnet_db_id
 }
 
 module "database" {

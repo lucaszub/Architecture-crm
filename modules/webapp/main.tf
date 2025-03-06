@@ -68,7 +68,8 @@ resource "azurerm_role_assignment" "acr_pull_system" {
   depends_on = [azurerm_linux_web_app.webapp, azurerm_container_registry.acr]
 }
 
+
 resource "azurerm_app_service_virtual_network_swift_connection" "webapp_vnet_integration" {
   app_service_id = azurerm_linux_web_app.webapp.id
-  subnet_id      = var.webapp_subnet_id
+  subnet_id      = var.subnet_db_id
 }
